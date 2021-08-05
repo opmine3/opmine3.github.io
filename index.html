@@ -70,10 +70,10 @@ body, html {
   position: absolute;
   top: 170%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
   z-index: 2;
   width: 20%;
-  transition: width 1.5s, height 1.5s;
+  transition: width 5s;
   height: 20%;
   padding: 20px;
   text-align: center;
@@ -88,6 +88,8 @@ body, html {
 #second {
   background-image:linear-gradient(#008B8B, #D2691E);
 	}
+
+
 
 </style>
 </head>
@@ -122,16 +124,29 @@ Example: A client (browser) sends an HTTP request to the server; then the server
 <script>
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
+var w = window.innerWidth;
+
+if (w < 1366) {
+	document.getElementById("card_wide").style.width = 50 + "%";
+	document.getElementById("card_wide").style.top = 220 + "%";
+	}
 
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   //document.getElementById("card_wide").style.width = scrolled-50 + "%";
-  if (scrolled >= 55) {
-	document.getElementById("card_wide").style.width = scrolled-30 + "%";
-	document.getElementById("card_wide").style.height = scrolled-30 + "%";
+  if (w >= 1366) {
+	  if (scrolled >= 55) {
+		document.getElementById("card_wide").style.width = scrolled-30 + "%";
+	  }
   }
+  else if (w < 1366) {
+
+	  if (scrolled >= 55) {
+		document.getElementById("card_wide").style.width = scrolled + "%";
+	  }
+	}
 }
 </script>
 
