@@ -7,6 +7,7 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background:#000;
 }
 
 * {
@@ -31,6 +32,20 @@ body, html {
   background-size: cover;
 }
 
+.wide {
+  /* The image used */
+  background-image: url("wide_sun.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	}
+
 /* Position text in the middle of the page/image */
 .bg-text {
   background-color: rgb(0, 0, 0); /* Fallback color */
@@ -47,10 +62,31 @@ body, html {
   padding: 20px;
   text-align: center;
   }
+
+.card_wide {
+  background-image:linear-gradient(#6495ED, #008B8B);
+  color: #f9f9f9;
+  font-weight: bold;
+  position: absolute;
+  top: 170%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 20%;
+  transition: width 1.5s, height 1.5s;
+  height: 20%;
+  padding: 20px;
+  text-align: center;
+	}
   
+  /* background-image:linear-gradient(#5F9EA0, #6495ED, #008B8B, #D2691E, #FFA500); */
 .block {
-  height:10000px;
-  background-image:linear-gradient(#8A2BE2, #9932CC, #5F9EA0, #6495ED, #008B8B, #D2691E, #FFA500);
+  padding: 20px;
+  background-image:linear-gradient(#5F9EA0, #6495ED);
+  color:#f9f9f9;
+	}
+#second {
+  background-image:linear-gradient(#008B8B, #D2691E);
 	}
 
 </style>
@@ -63,7 +99,41 @@ body, html {
     <text style="font-family:arial; font-size:50px;"><b style="color:#A52A2A;">OP</b><strong style="color:#008B8B;">mine</strong>3</text>
   <p>Website made by Thbop</p>
 </div>
-<div class="block"></div>
+<div class="block">Use a container element and add a background image to the container with a specific height. Then use the background-attachment: fixed to create the actual parallax effect. The other background properties are used to center and scale the image perfectly:<br><br>The example above used pixels to set the height of the image. If you want to use percent, for example 100%, to make the image fit the whole screen, set the height of the parallax container to 100%. Note: You must also apply height: 100% to both and Some mobile devices have a problem with background-attachment: fixed. However, you can use media queries to turn off the parallax effect for mobile devices:<br><br>When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".<br><br>
+
+It is common to name these errors HTML error messages.
+<br><br>
+But these messages are something called HTTP status messages. In fact, the server always returns a message for every request. The most common message is 200 OK.
+<br><br>
+Below is a list of HTTP status messages that might be returned:</div>
+
+<div class="wide"></div>
+<div class="card_wide" id="card_wide"><h1>Something Important</h1></div>
+
+<div class="block" id="second">Use a container element and add a background image to the container with a specific height. Then use the background-attachment: fixed to create the actual parallax effect. The other background properties are used to center and scale the image perfectly:<br><br>The example above used pixels to set the height of the image. If you want to use percent, for example 100%, to make the image fit the whole screen, set the height of the parallax container to 100%. Note: You must also apply height: 100% to both and Some mobile devices have a problem with background-attachment: fixed. However, you can use media queries to turn off the parallax effect for mobile devices:<br><br>When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".<br><br>
+The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
+<br><br>
+HTTP works as a request-response protocol between a client and server.
+<br><br>
+Example: A client (browser) sends an HTTP request to the server; then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.
+
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  //document.getElementById("card_wide").style.width = scrolled-50 + "%";
+  if (scrolled >= 55) {
+	document.getElementById("card_wide").style.width = scrolled-30 + "%";
+	document.getElementById("card_wide").style.height = scrolled-30 + "%";
+  }
+}
+</script>
 
 </body>
 </html>
