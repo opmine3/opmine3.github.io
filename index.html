@@ -50,7 +50,7 @@ body, html {
 .bg-text {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, .2); /* Black w/opacity/see-through */
-  color: black;
+  color: white;
   font-weight: bold;
   border: 3px solid #A52A2A;
   position: absolute;
@@ -64,7 +64,7 @@ body, html {
   }
 
 .card_wide {
-  background-image:linear-gradient(#6495ED, #008B8B);
+  background-image:linear-gradient(#696969, #808080);
   color: #f9f9f9;
   font-weight: bold;
   position: absolute;
@@ -72,10 +72,10 @@ body, html {
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 2;
-  width: 20%;
-  transition: width 5s;
+  width: 25%;
+  transition: width 2s;
   height: 20%;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
 	}
   
@@ -89,6 +89,25 @@ body, html {
   background-image:linear-gradient(#008B8B, #D2691E);
 	}
 
+.discord {
+  background:#8FBC8F;
+  text-decoration: none;
+  font-size:25px;
+  color:white;
+  transition: background .5s, padding 1s;
+  padding:15px;
+  text-align: center;
+	}
+
+.discord:hover {
+  background:#556B2F;
+  padding:17px;
+	}
+
+.discord:active {
+  background: #228B22;
+  padding:20px;
+	}
 
 
 </style>
@@ -98,8 +117,8 @@ body, html {
 <div class="bg-image"></div>
 
 <div class="bg-text">
-    <text style="font-family:arial; font-size:50px;"><b style="color:#A52A2A;">OP</b><strong style="color:#008B8B;">mine</strong>3</text>
-  <p>Website made by Thbop</p>
+    <text style="font-family:arial; font-size:50px;"><b style="color:#A52A2A;">OP</b><strong style="color:#008B8B;">mine</strong><b style="color:black;">3</b></text>
+  <p>ip: OPmine3.minehut.gg</p>
 </div>
 <div class="block">Use a container element and add a background image to the container with a specific height. Then use the background-attachment: fixed to create the actual parallax effect. The other background properties are used to center and scale the image perfectly:<br><br>The example above used pixels to set the height of the image. If you want to use percent, for example 100%, to make the image fit the whole screen, set the height of the parallax container to 100%. Note: You must also apply height: 100% to both and Some mobile devices have a problem with background-attachment: fixed. However, you can use media queries to turn off the parallax effect for mobile devices:<br><br>When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".<br><br>
 
@@ -110,7 +129,7 @@ But these messages are something called HTTP status messages. In fact, the serve
 Below is a list of HTTP status messages that might be returned:</div>
 
 <div class="wide"></div>
-<div class="card_wide" id="card_wide"><h1>Something Important</h1></div>
+<div class="card_wide" id="card_wide"><br><a href="https://discord.gg/bvQVF2Tz" class="discord" id="discord" target="_blank">Join Us On Discord!</a></div>
 
 <div class="block" id="second">Use a container element and add a background image to the container with a specific height. Then use the background-attachment: fixed to create the actual parallax effect. The other background properties are used to center and scale the image perfectly:<br><br>The example above used pixels to set the height of the image. If you want to use percent, for example 100%, to make the image fit the whole screen, set the height of the parallax container to 100%. Note: You must also apply height: 100% to both and Some mobile devices have a problem with background-attachment: fixed. However, you can use media queries to turn off the parallax effect for mobile devices:<br><br>When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".<br><br>
 The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
@@ -127,8 +146,9 @@ window.onscroll = function() {myFunction()};
 var w = window.innerWidth;
 
 if (w < 1366) {
-	document.getElementById("card_wide").style.width = 50 + "%";
+	document.getElementById("card_wide").style.width = 70 + "%";
 	document.getElementById("card_wide").style.top = 220 + "%";
+	document.getElementById("card_wide").style.transition = "width 0.5s";
 	}
 
 function myFunction() {
@@ -138,13 +158,17 @@ function myFunction() {
   //document.getElementById("card_wide").style.width = scrolled-50 + "%";
   if (w >= 1366) {
 	  if (scrolled >= 55) {
-		document.getElementById("card_wide").style.width = scrolled-30 + "%";
+	    if (scrolled <= 85) {
+		  document.getElementById("card_wide").style.width = scrolled-30 + "%";
+		  }
 	  }
   }
   else if (w < 1366) {
 
-	  if (scrolled >= 55) {
-		document.getElementById("card_wide").style.width = scrolled + "%";
+	  if (scrolled >= 70) {
+		if (scrolled <= 80) {
+		  document.getElementById("card_wide").style.width = scrolled+10 + "%";
+		    }
 	  }
 	}
 }
