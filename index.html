@@ -45,6 +45,20 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 	}
+	
+.total {
+  /* The image used */
+  background-image: url("total.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	}
 
 /* Position text in the middle of the page/image */
 .bg-text {
@@ -89,6 +103,10 @@ body, html {
   background-image:linear-gradient(#008B8B, #D2691E);
 	}
 
+#footer {
+  background-image:linear-gradient(#D2691E, #FFA500);
+	}
+
 .discord {
   background:#8FBC8F;
   text-decoration: none;
@@ -106,6 +124,26 @@ body, html {
 
 .discord:active {
   background: #228B22;
+  padding:20px;
+	}
+
+.button {
+  background:#00FFFF;
+  text-decoration: none;
+  font-size:25px;
+  color:white;
+  transition: background .5s, padding 1s;
+  padding:15px;
+  text-align: center;
+	}
+
+.button:hover {
+  background:#7FFFD4;
+  padding:17px;
+	}
+
+.button:active {
+  background: #F0F8FF;
   padding:20px;
 	}
 
@@ -129,7 +167,7 @@ But these messages are something called HTTP status messages. In fact, the serve
 Below is a list of HTTP status messages that might be returned:</div>
 
 <div class="wide"></div>
-<div class="card_wide" id="card_wide"><br><a href="https://discord.gg/bvQVF2Tz" class="discord" id="discord" target="_blank">Join Us On Discord!</a></div>
+<div class="card_wide" id="card_wide"><br><a href="https://discord.gg/teNqttkTPa" class="discord" id="discord" target="_blank">Join Us On Discord!</a></div>
 
 <div class="block" id="second">Use a container element and add a background image to the container with a specific height. Then use the background-attachment: fixed to create the actual parallax effect. The other background properties are used to center and scale the image perfectly:<br><br>The example above used pixels to set the height of the image. If you want to use percent, for example 100%, to make the image fit the whole screen, set the height of the parallax container to 100%. Note: You must also apply height: 100% to both and Some mobile devices have a problem with background-attachment: fixed. However, you can use media queries to turn off the parallax effect for mobile devices:<br><br>When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".<br><br>
 The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
@@ -138,6 +176,14 @@ HTTP works as a request-response protocol between a client and server.
 <br><br>
 Example: A client (browser) sends an HTTP request to the server; then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.
 
+</div>
+
+<div class="total"></div>
+<div class="block" id="footer">
+<center>
+<h1>OPmine3</h1>
+<a href="https://discord.gg/teNqttkTPa" class="button" target="_blank">Discord</a>
+</center>
 </div>
 
 <script>
