@@ -1,163 +1,42 @@
 <!DOCTYPE html>
+<!--Author: Thbop
+Main reference: www.w3schools.com
+Some of the code was copied and pasted from w3schools.
+-->
 <html>
 <head>
+<!--Make pixels a little more consistant between different screen sizes-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://img.icons8.com/color/48/000000/minecraft-pickaxe.png">
+
+
+<!-- reference: https://stackoverflow.com/questions/15356695/link-rel-stylesheet-href-css-style-css-is-not-working 
+<link rel="stylesheet" href="style.css">  <-not working for some reason.
+-->
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#000;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.bg-image {
-  /* The image used */
-  background-image: url("fancy_zoom.png");
-  
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  
-  /* Full height */
-  height: 100%; 
-  
-  /* Center and scale the image nicely */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.wide {
-  /* The image used */
-  background-image: url("wide_sun.png");
-
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-	}
-	
-.total {
-  /* The image used */
-  background-image: url("total.png");
-
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-	}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, .2); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #A52A2A;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-  }
-
-.card_wide {
-  background-image:linear-gradient(#696969, #808080);
-  color: #f9f9f9;
-  font-weight: bold;
-  position: absolute;
-  top: 170%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  z-index: 2;
-  width: 25%;
-  transition: width 2s;
-  height: 20%;
-  padding: 30px;
-  text-align: center;
-	}
-  
-  /* background-image:linear-gradient(#5F9EA0, #6495ED, #008B8B, #D2691E, #FFA500); */
-.block {
-  padding: 20px;
-  background-image:linear-gradient(#5F9EA0, #6495ED);
-  color:#f9f9f9;
-	}
-#second {
-  background-image:linear-gradient(#008B8B, #D2691E);
-	}
-
-#footer {
-  background-image:linear-gradient(#D2691E, #FFA500);
-	}
-
-.discord {
-  background:#8FBC8F;
-  text-decoration: none;
-  font-size:25px;
-  color:white;
-  transition: background .5s, padding 1s;
-  padding:15px;
-  text-align: center;
-	}
-
-.discord:hover {
-  background:#556B2F;
-  padding:17px;
-	}
-
-.discord:active {
-  background: #228B22;
-  padding:20px;
-	}
-
-.button {
-  background:#00FFFF;
-  text-decoration: none;
-  font-size:25px;
-  color:white;
-  transition: background .5s, padding 1s;
-  padding:15px;
-  text-align: center;
-	}
-
-.button:hover {
-  background:#7FFFD4;
-  padding:17px;
-	}
-
-.button:active {
-  background: #F0F8FF;
-  padding:20px;
-	}
-
-
+    @import url('style.css');
 </style>
+
+  <title>OPmine3</title>
 </head>
 <body>
-
+<!--classes from "style.css"-->
 <div class="bg-image"></div>
 
+<!--Title-->
 <div class="bg-text">
     <text style="font-family:arial; font-size:50px;"><b style="color:#A52A2A;">OP</b><strong style="color:#008B8B;">mine</strong><b style="color:black;">3</b></text>
   <p>ip: OPmine3.minehut.gg</p>
 </div>
+
+<!--Navigation bar-->
+<div class="nav"><br><center>
+<a href="rules.html" class="button">Rules</a>
+<a href="staff.html" class="button">Staff</a>
+<a href="about.html" class="button">About</a>
+</center>
+</div>
+<!--text block one-->
 <div class="block">Use a container element and add a background image to the container with a specific height. Then use the background-attachment: fixed to create the actual parallax effect. The other background properties are used to center and scale the image perfectly:<br><br>The example above used pixels to set the height of the image. If you want to use percent, for example 100%, to make the image fit the whole screen, set the height of the parallax container to 100%. Note: You must also apply height: 100% to both and Some mobile devices have a problem with background-attachment: fixed. However, you can use media queries to turn off the parallax effect for mobile devices:<br><br>When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".<br><br>
 
 It is common to name these errors HTML error messages.
@@ -166,9 +45,11 @@ But these messages are something called HTTP status messages. In fact, the serve
 <br><br>
 Below is a list of HTTP status messages that might be returned:</div>
 
+<!--2nd bg img/discord box & button-->
 <div class="wide"></div>
-<div class="card_wide" id="card_wide"><br><a href="https://discord.gg/teNqttkTPa" class="discord" id="discord" target="_blank">Join Us On Discord!</a></div>
+<div class="card_wide" id="card_wide"><br><a href="https://discord.gg/Ycf3gvQV96" class="discord" id="discord" target="_blank">Join Us On Discord!</a></div>
 
+<!--text block two-->
 <div class="block" id="second">Use a container element and add a background image to the container with a specific height. Then use the background-attachment: fixed to create the actual parallax effect. The other background properties are used to center and scale the image perfectly:<br><br>The example above used pixels to set the height of the image. If you want to use percent, for example 100%, to make the image fit the whole screen, set the height of the parallax container to 100%. Note: You must also apply height: 100% to both and Some mobile devices have a problem with background-attachment: fixed. However, you can use media queries to turn off the parallax effect for mobile devices:<br><br>When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".<br><br>
 The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
 <br><br>
@@ -177,31 +58,34 @@ HTTP works as a request-response protocol between a client and server.
 Example: A client (browser) sends an HTTP request to the server; then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.
 
 </div>
-
+<!--Last bg img+footer-->
 <div class="total"></div>
 <div class="block" id="footer">
 <center>
 <h1>OPmine3</h1>
-<a href="https://discord.gg/teNqttkTPa" class="button" target="_blank">Discord</a>
+A Minehut server.
 </center>
 </div>
 
+<!--Fancy js (that I TOTALLY...... wrote- kinda)-->
 <script>
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
 var w = window.innerWidth;
 
 if (w < 1366) {
+	//Make tablet/ipad experience readable
 	document.getElementById("card_wide").style.width = 70 + "%";
 	document.getElementById("card_wide").style.top = 220 + "%";
 	document.getElementById("card_wide").style.transition = "width 0.5s";
 	}
-
+//Fancy scrolling FX
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   //document.getElementById("card_wide").style.width = scrolled-50 + "%";
+  //PC code
   if (w >= 1366) {
 	  if (scrolled >= 55) {
 	    if (scrolled <= 85) {
@@ -209,6 +93,7 @@ function myFunction() {
 		  }
 	  }
   }
+  //Tablet/Ipad code
   else if (w < 1366) {
 
 	  if (scrolled >= 70) {
