@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<!--Author: Thbop
+Main reference: www.w3schools.com
+Some of the code was copied and pasted from w3schools.
+-->
+<html>
+<head>
+<!--Make pixels a little more consistant between different screen sizes-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://img.icons8.com/color/48/000000/minecraft-pickaxe.png">
+
+
+<!-- reference: https://stackoverflow.com/questions/15356695/link-rel-stylesheet-href-css-style-css-is-not-working 
+<link rel="stylesheet" href="style.css">  <-not working for some reason.
+-->
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#B0C4DE;
+}
+
+
+.button {
+  background:#00FFFF;
+  text-decoration: none;
+  font-size:25px;
+  color:white;
+  transition: background .5s, padding .1s;
+  padding:15px;
+  text-align: center;
+	}
+
+.button:hover {
+  background:#7FFFD4;
+  padding:17px;
+	}
+
+.button:active {
+  background: #F0F8FF;
+  padding:20px;
+	}
+
+.nav {
+  background:#E6E6FA;
+  
+  width:100%;
+  height:65px;
+	}
+
+.form {
+	padding: 25px;
+	}
+</style>
+
+  <title>OPmine3 -> Apply</title>
+</head>
+
+
+
+<!--Navigation bar-->
+<div class="nav"><br><center>
+<a href="https://opmine3.github.io" class="button">Home</a>
+<a href="https://opmine3.github.io/rules.html" class="button">Rules</a>
+<a href="https://opmine3.github.io/staff.html" class="button">Staff</a>
+<a href="https://opmine3.github.io/about.html" class="button">About</a>
+</center>
+</div>
+
+<!--
+1. whats your IGN name?
+2. whats your discord name?
+3. why do you want to be staff?
+4. what rank are you applying for?
+5. what can you do to help the server?
+ 6. Do you have experience as a staff member in another server?
+-->
+<div class="form">
+<form action="/form" method="POST">
+    <label for="IGN">Whats your IGN name?</label>
+    <input type="input" id="IGN" name="ign"><br>
+	
+	<label for="dis">Whats your discord name? <br>(i. e. username#0000)</label>
+    <input type="input" id="dis" name="dis"><br>
+	
+	Why do you want to be staff?<br>
+    <textarea id="why" name="why">I want to be staff because...</textarea><br>
+	
+	<label for="rank">What rank are you applying for?<br>(helper, mod, admin, builder)</label>
+    <input type="input" id="rank" name="rank"><br>
+	
+	What can you do to help the server?<br>
+    <textarea id="help" name="help">I can help by...</textarea><br>
+	
+	Do you have experience as a staff member in another server?<br>
+    <textarea id="xp" name="xp">Yes, I am a...</textarea><br>
+
+	<br>
+	<button type="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>
 
