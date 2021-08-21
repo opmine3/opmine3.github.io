@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Make pixels a little more consistant between different screen sizes-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://img.icons8.com/color/48/000000/minecraft-pickaxe.png">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+body {
+	background:#2F4F4F;
+	overflow: hidden; /* Hide scrollbars */
+	}
+
+.btn {
+  background-color: DodgerBlue;
+  text-decoration: None;
+  font-family: arial;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right:49%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.spacer {
+	aspect-ratio: 960/100;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	top: 0%;
+	left:0%;
+	position: absolute;
+	}
+	
+.layer1 {
+	background-image: url('layer1.svg');
+	z-index:-1;
+	}
+
+.layer2 {
+	background-image: url('layer1.svg');
+	transform: rotate(180deg);
+	top: 80%;
+	z-index:-3;
+	}
+	
+.blob {
+	z-index:-2;
+	left:-5%;
+	top:5%;
+	position: absolute;
+	
+	}
+
+.center-text {
+  font-family: arial;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right:42%;
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+
+	}
+
+
+</style>
+	<title>OPmine3 -> Texture Pack</title>
+</head>
+<body>
+<div class="spacer layer1"></div>
+
+<svg id="visual" viewBox="0 0 2000 900" width="2000" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="blob"><g transform="translate(966.9565281760182 621.9674793542328)"><path d="M334.9 -342.2C428.4 -241.4 494.7 -120.7 477.8 -16.9C461 87 360.9 173.9 267.4 230.9C173.9 287.9 87 315 -3.5 318.5C-94 322 -188.1 302.1 -235 245.1C-281.8 188.1 -281.6 94 -322.9 -41.4C-364.3 -176.8 -447.3 -353.6 -400.4 -454.4C-353.6 -555.2 -176.8 -580.1 -28 -552.1C120.7 -524 241.4 -443 334.9 -342.2" fill="#3CB371"></path></g></svg>
+
+
+<a href="https://cdn.discordapp.com/attachments/876807413636927529/877637096414785576/OpMine3_Pack_1.zip" class="btn"><i class="fa fa-download"></i> Download</a>
+<a href="index.html" class="btn" style="right:40%;">Cancel</a>
+<p class="center-text">Pack made by: MeMeR_Rexon</p>
+
+
+
+<div class="spacer layer2"></div>
+
+</body>
+</html>
